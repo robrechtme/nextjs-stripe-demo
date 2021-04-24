@@ -103,7 +103,12 @@
   resolved "https://registry.yarnpkg.com/@opentelemetry/context-base/-/context-base-0.14.0.tgz#c67fc20a4d891447ca1a855d7d70fa79a3533001"
   integrity sha512-sDOAZcYwynHFTbLo6n8kIbLiVF3a3BLkrmehJUyEbT9F+Smbi47kLGS2gG2g0fjBLR/Lr1InPD7kXL7FaTqEkw==
 
-"@types/node@*":
+"@stripe/stripe-js@^1.13.2":
+  version "1.13.2"
+  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-1.13.2.tgz#bb2f561085b5dd091355df871d432b8e1fd467f6"
+  integrity sha512-fycUk7ECukNc31lD5apcrUgdRC1BfiIacs+CpacoCjOgo3ablolnWCvDQWMmVWtODYa8bBv2dlBla+Edc5OvZg==
+
+"@types/node@*", "@types/node@>=8.1.0":
   version "14.14.41"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.41.tgz#d0b939d94c1d7bd53d04824af45f1139b8c45615"
   integrity sha512-dueRKfaJL4RTtSa7bWeTK1M+VH+Gns73oCgzvYfHZywRCoPSd8EkXBL0mZ9unPTveBn+D9phZBaxuzpwjWkW0g==
@@ -573,6 +578,11 @@ depd@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"
   integrity sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak=
+
+dequal@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/dequal/-/dequal-2.0.2.tgz#85ca22025e3a87e65ef75a7a437b35284a7e319d"
+  integrity sha512-q9K8BlJVxK7hQYqa6XISGmBZbtQQWVXSrRrWreHC94rMt1QL/Impruc+7p2CYSYuVIUr+YCt6hjrs1kkdJRTug==
 
 des.js@^1.0.0:
   version "1.0.1"
@@ -1424,6 +1434,13 @@ punycode@^2.1.0:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
+qs@^6.6.0:
+  version "6.10.1"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.10.1.tgz#4931482fa8d647a5aab799c5271d2133b981fb6a"
+  integrity sha512-M528Hph6wsSVOBiYUnGf+K/7w0hNshs/duGsNXPUCLH5XAqjEtiPGwNONLV0tBH8NoGb0mvD5JubnUTrujKDTg==
+  dependencies:
+    side-channel "^1.0.4"
+
 querystring-es3@0.2.1, querystring-es3@^0.2.0:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/querystring-es3/-/querystring-es3-0.2.1.tgz#9ec61f79049875707d69414596fd907a4d711e73"
@@ -1463,6 +1480,13 @@ raw-body@2.4.1:
     http-errors "1.7.3"
     iconv-lite "0.4.24"
     unpipe "1.0.0"
+
+react-confetti@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/react-confetti/-/react-confetti-6.0.1.tgz#d4f57b5a021dd908a6243b8f63b6009b00818d10"
+  integrity sha512-ZpOTBrqSNhWE4rRXCZ6E6U+wGd7iYHF5MGrqwikoiBpgBq9Akdu0DcLW+FdFnLjyZYC+VfAiV2KeFgYRMyMrkA==
+  dependencies:
+    tween-functions "^1.2.0"
 
 react-dom@^17.0.1:
   version "17.0.2"
@@ -1584,6 +1608,15 @@ shell-quote@1.7.2:
   resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.7.2.tgz#67a7d02c76c9da24f99d20808fcaded0e0e04be2"
   integrity sha512-mRz/m/JVscCrkMyPqHc/bczi3OQHkLTqXHEFu0zDhK/qfv3UcOA4SVmRCLmos4bhjr9ekVQubj/R7waKapmiQg==
 
+side-channel@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/side-channel/-/side-channel-1.0.4.tgz#efce5c8fdc104ee751b25c58d4290011fa5ea2cf"
+  integrity sha512-q5XPytqFEIKHkGdiMIrY10mvLRvnQh42/+GoBlFW3b2LXLE2xxJpZFdm94we0BaoV3RwJyGqg5wS7epxTv0Zvw==
+  dependencies:
+    call-bind "^1.0.0"
+    get-intrinsic "^1.0.2"
+    object-inspect "^1.9.0"
+
 source-map@0.7.3:
   version "0.7.3"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.7.3.tgz#5302f8169031735226544092e64981f751750383"
@@ -1699,6 +1732,14 @@ strip-ansi@6.0.0:
   dependencies:
     ansi-regex "^5.0.0"
 
+stripe@^8.145.0:
+  version "8.145.0"
+  resolved "https://registry.yarnpkg.com/stripe/-/stripe-8.145.0.tgz#5d5c18ffb86b247ef67d7a162bab3753f650ab10"
+  integrity sha512-znLtEdO/ZT9mKUWechzcDQNWySt0e1RxyOOx+GZXFq6pspPhsse9MIehXEd+QdYnf8kvSAg041Txdgq+1yZqOg==
+  dependencies:
+    "@types/node" ">=8.1.0"
+    qs "^6.6.0"
+
 styled-jsx@3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/styled-jsx/-/styled-jsx-3.3.2.tgz#2474601a26670a6049fb4d3f94bd91695b3ce018"
@@ -1751,6 +1792,13 @@ supports-color@^8.0.0:
   dependencies:
     has-flag "^4.0.0"
 
+swr@^0.5.5:
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/swr/-/swr-0.5.5.tgz#c72c1615765f33570a16bbb13699e3ac87eaaa3a"
+  integrity sha512-u4mUorK9Ipt+6LEITvWRWiRWAQjAysI6cHxbMmMV1dIdDzxMnswWo1CyGoyBHXX91CchxcuoqgFZ/ycx+YfhCA==
+  dependencies:
+    dequal "2.0.2"
+
 timers-browserify@2.0.12, timers-browserify@^2.0.4:
   version "2.0.12"
   resolved "https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-2.0.12.tgz#44a45c11fbf407f34f97bccd1577c652361b00ee"
@@ -1801,6 +1849,11 @@ tty-browserify@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/tty-browserify/-/tty-browserify-0.0.1.tgz#3f05251ee17904dfd0677546670db9651682b811"
   integrity sha512-C3TaO7K81YvjCgQH9Q1S3R3P3BtN3RIM8n+OvX4il1K1zgE8ZhI0op7kClgkxtutIE8hQrcrHBXvIheqKUUCxw==
+
+tween-functions@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/tween-functions/-/tween-functions-1.2.0.tgz#1ae3a50e7c60bb3def774eac707acbca73bbc3ff"
+  integrity sha1-GuOlDnxguz3vd06scHrLynO7w/8=
 
 type-fest@^0.7.1:
   version "0.7.1"
