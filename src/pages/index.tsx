@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { fetchPostJSON } from "../utils/apiHelpers";
 import getStripe from "../utils/getStripe";
 import dynamic from "next/dynamic";
+
 const Background = dynamic(() => import("../components/Background"), {
   ssr: false,
 });
@@ -18,6 +19,12 @@ const H2 = styled.h2`
   font-weight: 500;
   color: #4e5968;
 `;
+const Error = styled.span`
+  font-size: 0.85rem;
+  margin-top: 1em;
+  color: #ff0062;
+`;
+
 const TitleContainer = styled.div`
   display: flex;
   align-self: flex-start;
@@ -209,7 +216,7 @@ const IndexPage = () => {
             </span>
           </NumberField>
           <Button onClick={handleCheckout}>Doneer</Button>
-          {error}
+          {error && <Error>{error}</Error>}
         </Card>
       </Layout>
     </>

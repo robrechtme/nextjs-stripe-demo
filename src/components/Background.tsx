@@ -10,28 +10,17 @@ const CanvasContainer = styled.div`
   position: absolute;
   inset: 0;
   z-index: -1;
+  background-image: url(./bg.jpg);
+  background-size: cover;
 `;
-
-const BackgroundImage = styled.img`
-  position: fixed;
-  inset: 0;
-`;
-
-const positions = [
-  Math.random() * 10 - 5,
-  Math.random() * 10 - 5,
-  Math.random() * 10 - 5,
-];
 
 export default function Background() {
   const { x, y } = useMouse();
   const { width, height } = useWindowSize();
   const dX = (2 * (x - width! / 2)) / width!;
   const dY = (2 * (y - height! / 2)) / height!;
-  console.log({ dX, dY });
   return (
     <CanvasContainer>
-      <BackgroundImage src="/bg.jpg" />
       <Canvas>
         <mesh rotation={[dY * -0.01, dX * -0.01, 0]}>
           <mesh position={[-1, -1, 0]}>
@@ -56,16 +45,23 @@ export default function Background() {
             <meshStandardMaterial />
           </mesh>
 
-          {/*  */}
-          <pointLight color={COLORS[0]} position={[1.5, 4, 0]} />
+          <pointLight
+            color={COLORS[0]}
+            position={[1.5, 4, 0]}
+            intensity={0.4}
+          />
           <pointLight
             color={COLORS[1]}
             position={[-7, -3.5, 2]}
-            intensity={2}
+            intensity={0.4}
           />
-          <pointLight color={COLORS[2]} position={[5, -5, -4]} />
-          <pointLight color={COLORS[3]} position={[-8, 5, 4]} intensity={0.5} />
-          <pointLight color={COLORS[4]} position={[9, 0, 2]} />
+          <pointLight
+            color={COLORS[2]}
+            position={[5, -5, -4]}
+            intensity={0.4}
+          />
+          <pointLight color={COLORS[3]} position={[-8, 5, 4]} intensity={0.4} />
+          <pointLight color={COLORS[4]} position={[9, 0, 2]} intensity={0.4} />
           <ambientLight intensity={0.09} />
         </mesh>
       </Canvas>

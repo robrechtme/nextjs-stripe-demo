@@ -3,9 +3,7 @@ import type { AppProps } from "next/app";
 import { Normalize } from "styled-normalize";
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 html, 
-
 body {
   font-family: 'Montserrat', sans-serif;
   height: 100%;
