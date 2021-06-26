@@ -29,11 +29,11 @@ export default async function handler(
           },
         ],
         success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
+        // @ts-expect-error
         cancel_url: req.headers.origin!,
       };
-      const checkoutSession: Stripe.Checkout.Session = await stripe.checkout.sessions.create(
-        params
-      );
+      const checkoutSession: Stripe.Checkout.Session =
+        await stripe.checkout.sessions.create(params);
 
       res.status(200).json(checkoutSession);
     } catch (err) {
